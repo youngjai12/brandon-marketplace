@@ -1,5 +1,5 @@
 {
   "name": "safe-read-hooks",
-  "version": "0.1.0",
-  "description": "Auto-allow read-only Bash commands whose paths stay inside the project"
+  "version": "0.2.0",
+  "description": "Orchestrator: GOAL.md·대화 맥락·POLICY.md 근거로 권한 요청·질문·실행 결과를 사람 대신 판정"
 }

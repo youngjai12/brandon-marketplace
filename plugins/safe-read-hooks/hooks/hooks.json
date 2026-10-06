@@ -2,13 +2,32 @@
   "hooks": {
     "PreToolUse": [
       {
+        "matcher": "AskUserQuestion",
+        "hooks": [
+          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/orchestrator.py\"", "timeout": 90 }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
         "matcher": "Bash",
         "hooks": [
-          {
-            "type": "command",
-            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/allow-inside-cwd-reads.py\"",
-            "timeout": 5
-          }
+          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/orchestrator.py\"", "timeout": 90 }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/orchestrator.py\"", "timeout": 90 }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/orchestrator.py\"", "timeout": 10 }
         ]
       }
     ]
