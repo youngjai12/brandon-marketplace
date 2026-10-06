@@ -1,0 +1,5 @@
+{
+  "name": "safe-read-hooks",
+  "version": "0.1.0",
+  "description": "Auto-allow read-only Bash commands whose paths stay inside the project"
+}

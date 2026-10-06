@@ -1,0 +1,11 @@
+{
+  "name": "brandon-plugins",
+  "owner": { "name": "brandon" },
+  "plugins": [
+    {
+      "name": "safe-read-hooks",
+      "source": "./plugins/safe-read-hooks",
+      "description": "Auto-allow read-only Bash commands whose paths stay inside the project"
+    }
+  ]
+}
